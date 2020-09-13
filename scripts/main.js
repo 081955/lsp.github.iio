@@ -3,7 +3,7 @@ let myA = document.getElementById('baidu');
 
 myImage.onclick = function () {
     let mySrc = myImage.getAttribute('src');
-    if (mySrc === '/images/baidu.png') {
+    if (mySrc === 'images/baidu.png') {
         myImage.setAttribute('src', '/images/steam.jpg');
         myA.setAttribute('href', 'https://baidu.com/');
         alert('steam is the best');
