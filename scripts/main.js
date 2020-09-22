@@ -1,5 +1,6 @@
 let myImage = document.getElementById('img1');
 let myA = document.getElementById('baidu');
+let mytext = document.querySelector('input');
 
 myImage.onclick = function () {
     let mySrc = myImage.getAttribute('src');
@@ -14,7 +15,9 @@ myImage.onclick = function () {
     }
 }
 
-let myButton = document.querySelector('button');
+let myButton = document.getElementById('button1');
+let button2 = document.getElementById('button2');
+
 let myHeading = document.querySelector('h1');
 
 function setUserName() {
