@@ -6,11 +6,16 @@ myImage.onclick = function () {
     let mySrc = myImage.getAttribute('src');
     if (mySrc === 'images/baidu.png') {
         myImage.setAttribute('src', 'images/steam.jpg');
-        myA.setAttribute('href', 'https://baidu.com/');
+        
         alert('steam is the best');
+    } else if (mySrc === 'images/wsx1.jpg') {
+        myImage.setAttribute('src', 'images/wsx2.jpg');
+        alert('永远最可爱！');
+    } else if (mySrc === 'images/wsx2.jpg') {
+        myImage.setAttribute('src', 'images/wsx1.jpg');
+        alert('你还是最可爱！');
     } else {
         myImage.setAttribute('src', 'images/baidu.png');
-        myA.setAttribute('href', 'https://store.steampowered.com/');
         alert('badi is better than steam');
     }
 }
@@ -24,9 +29,15 @@ function setUserName() {
     let myName = prompt('please input your name: ');
     if (!myName || myName === null) {
         setUserName();
+    } else if (myName === "魏苏新"){
+        localStorage.setItem('name', myName);
+        myHeading.textContent = myName + " 好可爱";
+        myImage.setAttribute('src', 'images/wsx1.jpg');
+        myA.setAttribute('href', '');
+        alert('永远最可爱！');
     } else {
         localStorage.setItem('name', myName);
-        myHeading.textContent = 'Mozilla 苦逼了 ' + myName;
+        myHeading.textContent = myName + " 超厉害";
     }
 
 }
